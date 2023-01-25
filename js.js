@@ -1,6 +1,10 @@
-let ask = +prompt("Введіть число:");
-
+var ask = +prompt("Введіть число:");
 const arr = [];
+
+while (ask == '' || isNaN(ask)) {
+    alert("Це було не число, спробуй ще раз");
+    ask = +prompt("Введіть число:"); 
+}
 
 do {
     arr.unshift(Math.floor(Math.random() * 100));
